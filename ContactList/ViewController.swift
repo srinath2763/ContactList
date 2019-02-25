@@ -22,6 +22,26 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return contacts.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      performSegue(withIdentifier: "ShowDetailsSegue", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailsSegue" {
+            if let colorViewController = segue.destination as? DetailsViewController {
+                colorViewController.receivedString = "sdawd"
+            }
+        }
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowDetailsSegue" {
+            if let colorViewController = segue.destination as? DetailsViewController {
+                colorViewController.receivedString = "sdawd"
+            }
+        }
+    }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

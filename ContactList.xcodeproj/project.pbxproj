@@ -13,6 +13,7 @@
 		49FCDB7622233A4100DC66D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49FCDB7522233A4100DC66D1 /* Assets.xcassets */; };
 		49FCDB7922233A4100DC66D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49FCDB7722233A4100DC66D1 /* LaunchScreen.storyboard */; };
 		49FCDB8322233B3300DC66D1 /* ContactStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCDB8222233B3300DC66D1 /* ContactStruct.swift */; };
+		49FCDBA32223706200DC66D1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCDBA22223706200DC66D1 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		49FCDB7822233A4100DC66D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49FCDB7A22233A4100DC66D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49FCDB8222233B3300DC66D1 /* ContactStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStruct.swift; sourceTree = "<group>"; };
+		49FCDBA22223706200DC66D1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				49FCDB6E22233A3F00DC66D1 /* AppDelegate.swift */,
 				49FCDB7022233A3F00DC66D1 /* ViewController.swift */,
 				49FCDB7222233A3F00DC66D1 /* Main.storyboard */,
+				49FCDBA22223706200DC66D1 /* DetailsViewController.swift */,
 				49FCDB7522233A4100DC66D1 /* Assets.xcassets */,
 				49FCDB7722233A4100DC66D1 /* LaunchScreen.storyboard */,
 				49FCDB7A22233A4100DC66D1 /* Info.plist */,
@@ -141,6 +144,7 @@
 				49FCDB7122233A3F00DC66D1 /* ViewController.swift in Sources */,
 				49FCDB8322233B3300DC66D1 /* ContactStruct.swift in Sources */,
 				49FCDB6F22233A3F00DC66D1 /* AppDelegate.swift in Sources */,
+				49FCDBA32223706200DC66D1 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
