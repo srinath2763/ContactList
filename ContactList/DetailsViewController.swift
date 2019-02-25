@@ -10,16 +10,37 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    var receivedString:String = ""
+    var firstName:String?
+    @IBOutlet weak var firstNameLabel: UILabel!
+    
+    var lastName:String?
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
+    @IBOutlet weak var numberLabel: UILabel!
+    var number:String?
+    
+    var email:String?
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(receivedString)
+        
 
         
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func dismissAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
+        firstNameLabel.text = firstName
+        lastNameLabel.text = lastName
+        numberLabel.text = number
+        emailLabel.text = email
     }
 
     /*
