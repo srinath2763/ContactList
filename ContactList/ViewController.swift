@@ -22,12 +22,30 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return contacts.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      performSegue(withIdentifier: "ShowDetailsSegue", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetailsSegue" {
+            if let showdetailSeague = segue.destination as? DetailsViewController {
+                if let indexPath = tableView.indexPathForSelectedRow{
+                    let contact = contacts[indexPath.row]
+                    showdetailSeague.firstName = contact.givenName
+                    showdetailSeague.number = contact.number
+                    showdetailSeague.lastName = contact.familyName
+                    showdetailSeague.email = "None"
+                }
+            }
+        }
+    }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         let contactToDisplay = contacts[indexPath.row]
-        cell.textLabel?.text = contactToDisplay.givenName + contactToDisplay.familyName
+        cell.textLabel?.text = contactToDisplay.givenName + " "+contactToDisplay.familyName
         cell.detailTextLabel?.text = contactToDisplay.number
         return cell
     }
@@ -57,7 +75,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             let givenName = contact.givenName
             let familyName = contact.familyName
             let number = contact.phoneNumbers.first?.value.stringValue
-            let contactToAppend = ContactStruct(givenName: givenName,familyName: familyName,number:number ?? "0")
+            let contactToAppend = ContactStruct(givenName: givenName,familyName: familyName,number:number!)
             self.contacts.append(contactToAppend)
             
         }

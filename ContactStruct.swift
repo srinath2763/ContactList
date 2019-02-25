@@ -7,9 +7,10 @@
 //
 
 import Foundation
-
+//Struct for use in viewcontroller
 struct  ContactStruct {
     let givenName:String
     let familyName:String
     let number:String
+
 }
